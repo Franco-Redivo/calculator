@@ -23,6 +23,8 @@ body{
     gap: 30px;
     padding-left: 5px;
     padding-right: 5px;
+    border-style: inset;
+    border-color: lightskyblue;
 
 }
 
@@ -32,9 +34,24 @@ body{
     width: 305px;
     height: 100px;
     border-radius: 14px;
-    text-align: end;
     padding: 15px;
-    font-size: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-style: inset;
+    
+}
+
+.current{
+    margin-top: 5px;
+    font-size: 40px;
+    height: 60%;
+}
+
+.previous{
+    font-size: 20px;
+    height: 30%;
 }
 
 .buttons-container{
@@ -48,29 +65,69 @@ body{
 }
 
 .button{
+    cursor: pointer;
     width: 70px;
     height: 70px;
     border-radius: 22px;
     font-size: 27px;
     border: none;
+    box-shadow: 2px 4px 2px darkgrey;
 }
 
 .special-button{
     background-color: khaki;
+    box-shadow: 2px 4px 2px goldenrod;
 }
 
 .operator-button{
     background-color: orange;
     color: aliceblue;
+    box-shadow: 2px 4px 2px coral;
 }
 
-.number-button{
+.number-button, .decimal-button{
     background-color: dimgray;
     color: aliceblue;
 }
 
+.equals-button{
+    box-shadow: 2px 4px 2px grey;
+}
+
 .zero{
-    width: 150px;
+    width: 140px;
     text-align: start;
     padding-left: 20px;
+}
+
+.number-button:active{
+    box-shadow: 1px 2px 1px darkgrey;
+    position: relative;
+    top: 2px;
+    left: 1px;
+    
+}
+
+.operator-button:active{
+    box-shadow: 1px 2px 1px coral;
+    position: relative;
+    top: 2px;
+    left: 1px;
+    
+}
+
+.equals-button:active{
+    box-shadow: 1px 2px 1px grey;
+    position: relative;
+    top: 2px;
+    left: 1px;
+    
+}
+
+.special-button:active{
+    box-shadow: 1px 2px 1px goldenrod;
+    position: relative;
+    top: 2px;
+    left: 1px;
+    
 }
